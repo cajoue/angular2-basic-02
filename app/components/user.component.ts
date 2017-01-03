@@ -13,6 +13,10 @@ import { Component } from '@angular/core';
         <li *ngFor="let hobby of hobbies">
           {{hobby}} </li>
       </ul>
+      <form (submit)="addHobby(hobby.value)">
+        <label>Add Hobby: </label><br />
+        <input type="text" #hobby /> <br />
+      </form>
     </div>
     <hr />
     <h3>Edit User</h3>
@@ -57,6 +61,11 @@ export class UserComponent  {
     } else {
       this.showHobbies = true;
     }
+  }
+
+  addHobby(hobby: string){
+    console.log(hobby);
+    this.hobbies.push(hobby);
   }
 }
 
