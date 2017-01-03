@@ -14,9 +14,19 @@ import { Component } from '@angular/core';
           {{hobby}} </li>
       </ul>
     </div>
+    <hr />
+    <h3>Edit User</h3>
     <form>
       <label>Name: </label><br />
-      <input type="text" name="name" [(ngModel)]="name" />
+      <input type="text" name="name" [(ngModel)]="name" /> <br />
+      <label>Email: </label><br />
+      <input type="text" name="email" [(ngModel)]="email" /> <br />
+      <label>Street: </label><br />
+      <input type="text" name="address.street" [(ngModel)]="address.street" /> <br />
+      <label>Street: </label><br />
+      <input type="text" name="address.city" [(ngModel)]="address.city" /> <br />
+      <label>Street: </label><br />
+      <input type="text" name="address.canton" [(ngModel)]="address.canton" /> <br />
     </form>
     `,
 })
