@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PostsService } from '../services/posts.service';
 
 @Component({
   selector: 'user',
@@ -34,6 +35,7 @@ import { Component } from '@angular/core';
       <input type="text" name="address.canton" [(ngModel)]="address.canton" /> <br />
     </form>
     `,
+    providers: [PostsService]
 })
 export class UserComponent  {
   name: string;
